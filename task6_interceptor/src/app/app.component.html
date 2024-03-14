@@ -1,0 +1,26 @@
+<h1 class="heading">{{title}}</h1>
+
+<h1 class="heading">Sharajman Records</h1>
+
+<br><br>
+
+<table border="1px">
+  <tr>
+    <th>Serial No</th>
+    <th>Employee Code</th>
+    <th>Full Name</th>
+    <th>Department</th>
+    <th>Designation</th>
+    <th>Company Name</th>
+  </tr>
+
+  <tr *ngFor="let user of users; let i = index;">
+    <td>{{i+1}}</td>
+    <td>{{user.emp_code}}</td>
+    <td>{{user.full_name}}</td>
+    <td>{{user.department}}</td>
+    <td>{{user.designation}}</td>
+    <td>{{user.company_name}}</td>
+  </tr>
+</table>
+<br>
