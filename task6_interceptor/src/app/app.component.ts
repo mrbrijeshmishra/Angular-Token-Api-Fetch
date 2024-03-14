@@ -9,15 +9,7 @@ import { UserDataService } from './services/user-data.service';
 export class AppComponent {
   title = 'Api Fetching';
   users: any;
-  constructor(private userData: UserDataService) {}
-
-  ngOnInit() {
-    this.fetchUsers();
-  }
-
-  fetchUsers() {
-    this.userData.users().subscribe(data => {
-      this.users = data;
-    });
+  constructor(private userData: UserDataService) {
+    this.userData.users().subscribe(data=>{this.users=data;})
   }
 }
